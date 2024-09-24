@@ -27,6 +27,11 @@ footer {
     bottom: 0;
 }
 
+.centerText{
+    text-align: center;
+    transform: translateY(10%);
+}
+
 .back{
     background: none;
     border: none;
