@@ -141,10 +141,38 @@ a:hover{
     text-decoration: none;
 }
 
+/* Responsive design for smaller and narrow screens */
+@media (max-width: 1024px) {
+    .menu {
+        width: 25vw; /* Reduce menu width */
+        max-width: 300px;
+        padding: 15px;
+    }
+
+    .menubutton {
+        font-size: 1.2rem; /* Scale down font size */
+        padding: 0.8rem;
+    }
+
+    .trainer, .pokemon {
+        width: 50%; /* Shrink images */
+        max-width: 200px;
+    }
+
+    .pokemon {
+        left: -20px; /* Adjust position to keep close */
+        bottom: -4%;
+    }
+
+    p, .continue {
+        font-size: 30px; /* Scale down text for smaller screens */
+    }
+}
+
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
     .menu {
-        width: 40vw; /* Increase the width for smaller screens */
+        width: 20vw; /* Increase the width for smaller screens */
         max-width: 300px; /* Ensure it doesn’t get too large */
         padding: 15px;
     }
@@ -170,6 +198,34 @@ a:hover{
 }
 
 
+/* Global scaling for smaller devices */
+@media (max-width: 480px) {
+    .menu {
+        width: 12vw; /* Further reduce menu size */
+        max-width: 200px;
+        padding: 8px;
+    }
+
+    .menubutton {
+        font-size: 0.8rem; /* Adjust font size for smallest screens */
+        padding: 0.4rem;
+    }
+
+    .trainer, .pokemon {
+        width: 40%; /* Shrink images for narrow screens */
+        max-width: 100px;
+    }
+
+    .pokemon {
+        left: -5px; /* Minimal offset */
+        bottom: -1%; /* Align better on small screens */
+    }
+
+    p, .continue {
+        font-size: 16px; /* Reduce text size */
+    }
+}
+
 .center-wrapper {
     text-align: center; /* Centers the .img-container within the webpage */
     width: 100%; /* Ensures the wrapper takes the full width */
@@ -185,18 +241,18 @@ a:hover{
 
 .trainer{
     position: relative;
-    width: 75%;
+    width: 75vw;
     max-width: 250px;
     vertical-align: 55%;
 }
 
 .pokemon{
-    width: 60%;
+    width: 69%;
     max-width: 250px;
     margin-right: -50px; /* Adjust margin to position closer to the trainer */
     position: absolute;
     bottom: -8%; /* Align with the bottom of the trainer image */
-    left: -40px
+    left: -55px
 }
 
 
