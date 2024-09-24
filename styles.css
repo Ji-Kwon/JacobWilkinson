@@ -221,7 +221,7 @@ a:link, a:active, a:visited, a:hover{
     justify-content: center;
     margin-bottom: 2rem; /* Add some space below the images */
     position: relative;
-    transform: translateY(10%);
+    transform: translateY(6%);
 }
 
 .trainer{
