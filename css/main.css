@@ -220,7 +220,7 @@ a:link, a:active, a:visited, a:hover{
     justify-content: center;
     margin-bottom: 2rem; /* Add some space below the images */
     position: relative;
-    transform: translateY(6%);
+    
 }
 
 .trainer{
@@ -228,6 +228,7 @@ a:link, a:active, a:visited, a:hover{
     width: 75vw;
     max-width: 250px;
     vertical-align: 55%;
+    transform: translateY(10%);
 }
 
 .pokemon{
