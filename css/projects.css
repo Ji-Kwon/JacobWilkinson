@@ -26,3 +26,18 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
+.back{
+    background: none;
+    border: none;
+    font-size: 40px;
+    font-family: pokemon;
+    position: absolute;
+    bottom: 20%;
+    right: 10%;
+    cursor: pointer;
+}
+
+.back:hover{
+    color: rgb(204, 204, 204);
+}
