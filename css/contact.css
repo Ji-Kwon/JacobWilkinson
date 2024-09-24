@@ -1,0 +1,48 @@
+html{
+    height: 100%;
+    background: radial-gradient(#ffffff, #9198e5) no-repeat;
+    background-size: cover;
+    
+}
+
+@font-face {
+    src: url('../assets/fonts/pokemon-dp-pro.ttf');
+    font-family: pokemon;
+}
+
+body {
+    font-family: pokemon;
+    margin: 0;
+    padding: 0;
+
+}
+
+footer {
+    text-align: center;
+    padding: 0rem;
+    background-color: #333;
+    color: white;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.centerText{
+    text-align: center;
+    transform: translateY(10%);
+}
+
+.back{
+    background: none;
+    border: none;
+    font-size: 40px;
+    font-family: pokemon;
+    position: absolute;
+    bottom: 20%;
+    right: 10%;
+    cursor: pointer;
+}
+
+.back:hover{
+    color: rgb(204, 204, 204);
+}

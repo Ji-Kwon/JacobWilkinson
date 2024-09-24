@@ -1,0 +1,249 @@
+html{
+    height: 100%;
+    background: radial-gradient(#ffffff, #9198e5) no-repeat;
+    background-size: cover;
+    
+}
+
+@font-face {
+    src: url('../assets/fonts/pokemon-dp-pro.ttf');
+    font-family: pokemon;
+}
+
+body {
+    font-family: pokemon;
+    margin: 0;
+    padding: 0;
+
+}
+
+main{
+    padding: 2rem;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 0rem;
+    background-color: #333;
+    color: white;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.textbox{
+    display: block;
+    border-radius: 6px;
+    padding: 20px;
+    min-width: 85%;
+    min-height: 15%;
+    width: fit-content;
+    height: fit-content;
+    line-height: 40px;
+    margin: auto;
+    background: white;
+    border: 1px solid white;
+    box-shadow: 0 1px 0 1px black,
+                inset 0 1px 0 1px black,
+                0 0 0 1px black,
+                inset 0 0 0 1px black;
+    position: absolute;
+    bottom: 10%;
+}
+
+p{
+    font-size: 40px;
+}
+
+
+.continue{
+    background: none;
+    border: none;
+    font-size: 40px;
+    font-family: pokemon;
+    position: absolute;
+    bottom: 10%;
+    right: 6%;
+    cursor: pointer;
+}
+
+.continue:hover{
+    color: rgb(204, 204, 204);
+}
+
+.menu{
+    display: none;
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    width: 25vw;
+    max-width: 400px;
+    border-radius: 6px;
+    padding: 20px;
+    background: white;
+    border: 1px solid white;
+    box-shadow: 0 1px 0 1px black,
+                inset 0 1px 0 1px black,
+                0 0 0 1px black,
+                inset 0 0 0 1px black;
+    
+    
+}
+
+.menubutton{
+    display: block;
+    background: none;
+    border: none;
+    font-family: pokemon;
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.menubutton:hover{
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer
+}
+
+a:link, a:active, a:visited, a:hover{
+    color: black;
+    text-decoration: none;
+}
+
+
+/* Responsive design for smaller and narrow screens */
+@media (max-width: 1024px) {
+    .menu {
+        width: 25vw; /* Reduce menu width */
+        max-width: 300px;
+        padding: 15px;
+    }
+
+    .menubutton {
+        font-size: 1.2rem; /* Scale down font size */
+        padding: 0.8rem;
+    }
+
+    .trainer, .pokemon {
+        width: 50%; /* Shrink images */
+        max-width: 200px;
+    }
+
+    .pokemon {
+        left: -20px; /* Adjust position to keep close */
+        bottom: -4%;
+    }
+
+    p, .continue {
+        font-size: 30px; /* Scale down text for smaller screens */
+    }
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .menu {
+        width: 20vw; /* Increase the width for smaller screens */
+        max-width: 300px; /* Ensure it doesn’t get too large */
+        padding: 15px;
+    }
+
+    .menubutton {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+        padding: 0.8rem;
+    }
+
+    .trainer, .pokemon {
+        width: 60%;
+        max-width: 150px; /* Shrink images on smaller screens */
+    }
+
+    .pokemon {
+        left: -30px; /* Adjust position to keep them close */
+        bottom: -4%; /* Adjust alignment to fit smaller screen */
+    }
+
+    p, .continue {
+        font-size: 25px; /* Scale down text for smaller screens */
+    }
+}
+
+
+/* Global scaling for smaller devices */
+@media (max-width: 480px) {
+    .menu {
+        width: 12vw; /* Further reduce menu size */
+        max-width: 200px;
+        padding: 8px;
+    }
+
+    .menubutton {
+        font-size: 0.8rem; /* Adjust font size for smallest screens */
+        padding: 0.4rem;
+    }
+
+    .trainer, .pokemon {
+        width: 40%; /* Shrink images for narrow screens */
+        max-width: 100px;
+    }
+
+    .pokemon {
+        left: -5px; /* Minimal offset */
+        bottom: -1%; /* Align better on small screens */
+    }
+
+    p, .continue {
+        font-size: 16px; /* Reduce text size */
+    }
+}
+.center-wrapper {
+    text-align: center; /* Centers the .img-container within the webpage */
+    width: 100%; /* Ensures the wrapper takes the full width */
+}
+
+.img-container {
+    display: inline-block;
+    justify-content: center;
+    margin-bottom: 2rem; /* Add some space below the images */
+    position: relative;
+    transform: translateY(6%);
+}
+
+.trainer{
+    position: relative;
+    width: 75vw;
+    max-width: 250px;
+    vertical-align: 55%;
+}
+
+.pokemon{
+    width: 69%;
+    max-width: 250px;
+    margin-right: -50px; /* Adjust margin to position closer to the trainer */
+    position: absolute;
+    bottom: -8%; /* Align with the bottom of the trainer image */
+    left: -28%
+}
+
+
+
+
+
+
+
+
