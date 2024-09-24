@@ -121,25 +121,11 @@ p{
     cursor: pointer
 }
 
-a:link{
+a:link, a:active, a:visited, a:hover{
     color: black;
     text-decoration: none;
 }
 
-a:active{
-    color: black;
-    text-decoration: none;
-}
-
-a:visited{
-    color: black;
-    text-decoration: none;
-}
-
-a:hover{
-    color: black;
-    text-decoration: none;
-}
 
 /* Responsive design for smaller and narrow screens */
 @media (max-width: 1024px) {
@@ -225,7 +211,6 @@ a:hover{
         font-size: 16px; /* Reduce text size */
     }
 }
-
 .center-wrapper {
     text-align: center; /* Centers the .img-container within the webpage */
     width: 100%; /* Ensures the wrapper takes the full width */
@@ -236,7 +221,7 @@ a:hover{
     justify-content: center;
     margin-bottom: 2rem; /* Add some space below the images */
     position: relative;
-    
+    transform: translateY(10%);
 }
 
 .trainer{
@@ -254,6 +239,7 @@ a:hover{
     bottom: -8%; /* Align with the bottom of the trainer image */
     left: -28%
 }
+
 
 
 
