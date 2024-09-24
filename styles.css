@@ -84,23 +84,21 @@ p{
 
 .menu{
     display: none;
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    width: 25vw;
+    max-width: 400px;
     border-radius: 6px;
     padding: 20px;
-    min-width: 30%;
-    min-height: 25%;
-    width: fit-content;
-    height: fit-content;
-    line-height: 10px;
-    margin: auto;
     background: white;
     border: 1px solid white;
     box-shadow: 0 1px 0 1px black,
                 inset 0 1px 0 1px black,
                 0 0 0 1px black,
                 inset 0 0 0 1px black;
-    position: absolute;
-    right: 10%;
-    top: 10%
+    
+    
 }
 
 .menubutton{
@@ -108,11 +106,12 @@ p{
     background: none;
     border: none;
     font-family: myFont;
-    font-size: 40px;
-    padding: 2rem;
-    cursor: default;
-    line-height: 10px;
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    text-align: center;
     text-decoration: none;
+    cursor: pointer;
 }
 
 
@@ -142,13 +141,41 @@ a:hover{
     text-decoration: none;
 }
 
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .menu {
+        width: 40vw; /* Increase the width for smaller screens */
+        max-width: 300px; /* Ensure it doesn’t get too large */
+        padding: 15px;
+    }
+
+    .menubutton {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+        padding: 0.8rem;
+    }
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Aligns the Pokemon image to the bottom of the trainer image */
+    margin-bottom: 2rem; /* Add some space below the images */
+    position: relative;
+}
+
 .trainer{
-    width: 300px;
+    width: 40%;
+    max-width: 250px;
     vertical-align: 556%;
 }
 
 .pokemon{
-    width: 250px;
+    width: 35%;
+    max-width: 200px;
+    margin-right: -50px; /* Adjust margin to position closer to the trainer */
+    position: absolute;
+    bottom: -16%; /* Align with the bottom of the trainer image */
+    left: 16%;
 }
 
 
