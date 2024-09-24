@@ -11,9 +11,6 @@ if (getQueryParameter('openMenu') === 'true') {
     document.getElementById('menu').style.display = 'block';
     // Set session storage to indicate the menu has been opened
     sessionStorage.setItem('menuOpened', 'true');
-    
-    // Remove the query parameter from the URL
-    history.replaceState(null, '', window.location.pathname);
 } else if (sessionStorage.getItem('menuOpened')) {
     // If the menu was previously opened in this session, show it
     document.querySelector('.textbox').style.display = 'none';
