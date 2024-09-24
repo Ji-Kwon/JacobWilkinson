@@ -1,17 +1,3 @@
-// Function to navigate to a new page
-function navigateTo(page) {
-    window.location.href = page;
-}
-
-// Add event listeners for menu buttons
-document.querySelectorAll('.menubutton').forEach(button => {
-    button.addEventListener('click', function(e) {
-        e.preventDefault(); // Prevent the default link behavior
-        const targetPage = this.getAttribute('data-target');
-        navigateTo(targetPage); // Navigate to the specified page
-    });
-});
-
 // Check if the menu should be opened based on the URL parameter
 function checkMenuStatus() {
     const urlParams = new URLSearchParams(window.location.search);
