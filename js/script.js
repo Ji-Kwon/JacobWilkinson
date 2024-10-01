@@ -1,7 +1,7 @@
 // Check if the menu should be opened based on the URL parameter
 function checkMenuStatus() {
     const urlParams = new URLSearchParams(window.location.search);
-    const openMenu = urlParams.get('openMenu');
+    const openMensu = urlParams.get('openMenu');
     return openMenu === 'true';
 }
 
