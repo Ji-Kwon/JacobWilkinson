@@ -18,7 +18,7 @@ body {
 }
 
 .KSA-div{
-    width: 180px;
+    width: 50vw;
     position: relative;
     left: 10%;
 }
@@ -30,7 +30,7 @@ body {
 
 .thumbnail{
     display: block;
-    width: 160px;
+    width: 250px;
     position: relative;
     border: 1px solid white;
     border-radius: 6px 6px 0px 0px;
@@ -45,7 +45,7 @@ body {
 
 .textbox{
     display: block;
-    width: 150px;
+    width: 240px;
     position: relative;
     border-radius: 0px 0px 6px 6px;
     padding: 5px;
