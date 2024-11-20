@@ -1,0 +1,22 @@
+html{
+    height: 100%;
+    background: radial-gradient(#ffffff, #9198e5) no-repeat;
+    background-size: cover;
+    
+}
+
+@font-face {
+    src: url('../assets/fonts/pokemon-dp-pro.ttf');
+    font-family: pokemon;
+}
+
+th, td{
+    padding: 15px;
+}
+.btn{
+    display: block;
+    width: 100%
+}
+p{
+    font-family: pokemon;
+}
