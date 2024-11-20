@@ -17,14 +17,47 @@ body {
 
 }
 
-footer {
-    text-align: center;
-    padding: 0rem;
-    background-color: #333;
-    color: white;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
+.KSA-div{
+    width: 180px;
+    position: relative;
+    left: 10%;
+}
+
+.link-container{
+    text-decoration: none;
+    color: black;
+}
+
+.thumbnail{
+    display: block;
+    width: 160px;
+    position: relative;
+    border: 1px solid white;
+    border-radius: 6px 6px 0px 0px;
+    border-bottom: none;
+    top: 16px;
+    box-shadow: 0 -1px 0 1px black,
+                inset 0 1px 0 1px black,
+                0 0 0 1px black,
+                inset 0 0 0 1px black;
+    z-index: 2;
+}
+
+.textbox{
+    display: block;
+    width: 150px;
+    position: relative;
+    border-radius: 0px 0px 6px 6px;
+    padding: 5px;
+    line-height: 16px;
+    background: white;
+    border: 1px solid white;
+    border-top: none;
+    box-shadow: 0 1px 0 1px black,
+                inset 0 1px 0 1px black,
+                0 0 0 1px black,
+                inset 0 0 0 1px black;
+    z-index: 1;
 }
 
 .centerText{
@@ -45,4 +78,14 @@ footer {
 
 .back:hover{
     color: rgb(204, 204, 204);
+}
+
+footer {
+    text-align: center;
+    padding: 0rem;
+    background-color: #333;
+    color: white;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
