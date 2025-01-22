@@ -17,11 +17,32 @@ body {
 
 }
 
+.project-links-container {
+    display: flex;
+    justify-content: center; /* Centers the items horizontally */
+    align-items: flex-start; /* Aligns the items at the top */
+    gap: 2vw; /* Adds spacing between the items */
+}
+.KSA-div, .pokemon-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25vw; /* Ensure consistent sizing */
+    margin: 0; /* Remove any extra margin */
+}
+
 .KSA-div{
     display: flex;
-    width: 30vw;
+    width: 25vw;
     position: relative;
-    left: 10vw;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pokemon-div{
+    display: flex;
+    width: 25vw;
+    position: relative;
     flex-direction: column;
     align-items: center;
 }
@@ -33,7 +54,8 @@ body {
 
 .thumbnail {
     display: flex;
-    width: 30vw;
+    aspect-ratio: 2 / 1;
+    width: 25vw;
     position: relative;
     border: 0.2vw solid white;
     border-radius: 1vh 1vw 0 0;
@@ -46,39 +68,13 @@ body {
                 0 0 0 .2vw black,
                 inset 0 0 0 .2vw black;
     z-index: 2;
-    overflow: hidden;
 }
-
-.thumbnail::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    box-shadow: 0 .2vw 0 .2vw black,
-                inset 0 .2vw 0 .2vw black,
-                0 0 0 .2vw black,
-                inset 0 0 0 .2vw black;
-    border-radius: inherit; /* Matches parent border radius */
-    z-index: 3; /* Ensures shadow is above everything else */
-    pointer-events: none; /* Prevent interaction */
-}
-
-.thumbnail img {
-    width: 100%; /* Ensure image fits the container */
-    height: auto; /* Maintain aspect ratio */
-    position: relative;
-    z-index: 1; /* Keep image below the shadow */
-    border-radius: inherit; /* Matches the parent border radius */
-}
-
 .textbox{
     display: flex;
-    width: 30vw;
+    width: 25vw;
     position: relative;
     border-radius: 0px 0px 1vh 1vw;
-    line-height: 3vw;
+    line-height: 2vw;
     background: white;
     border: .2vw solid white;
     border-top: none;
@@ -87,11 +83,12 @@ body {
                 0 0 0 .2vw black,
                 inset 0 0 0 .2vw black;
     z-index: 1;
-    font-size: 2vw;
+    font-size: 1.5vw;
     padding: 0;
     margin: 0;
     margin: 0;
     top: -3vh;
+    text-align: center;
 }
 
 .centerText{
