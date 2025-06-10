@@ -6,52 +6,62 @@ import Project from './components/Project';
 import Sidebar from './components/Sidebar'
 import TechnologyCard from './components/TechnologyCard';
 
+//assets
+import jsLogo from './assets/icons/javascript-logo.svg';
+import reactLogo from './assets/icons/react-logo.svg';
+import figmaLogo from './assets/icons/figma-logo.svg';
+import gitLogo from './assets/icons/git-logo.svg';
+import mysqlLogo from './assets/icons/mysql-logo.svg';
+import nodeLogo from './assets/icons/node-logo.svg';
+import tailwindLogo from './assets/icons/tailwind-logo.svg';
+import awsLogo from './assets/icons/aws-logo.svg';
+
 //technologies
 const technologies = [
   {
-    icon: '/icons/javascript-logo.svg',
+    icon: jsLogo,
     name: 'JavaScript',
     description: 'Programming Language',
     color: 'rgba(255, 255, 0, 0.2)'
   },
   {
-    icon: '/icons/react-logo.svg',
+    icon: reactLogo,
     name: 'React',
     description: 'JavaScript Library',
     color: 'rgba(0, 255, 255, 0.2)'
   },
   {
-    icon: '/icons/figma-logo.svg',
+    icon: figmaLogo,
     name: 'Figma',
     description: 'Design Tool',
     color: 'rgba(160, 50, 255, 0.2)'
   },
   {
-    icon: '/icons/git-logo.svg',
+    icon: gitLogo,
     name: 'Git',
     description: 'Version Control',
     color: 'rgba(255, 30, 0, 0.2)'
   },
   {
-    icon: '/icons/mysql-logo.svg',
+    icon: mysqlLogo,
     name: 'MySQL',
     description: 'Relational Database',
     color: 'rgba(0, 128, 255, 0.2)'
   },
   {
-    icon: '/icons/node-logo.svg',
+    icon: nodeLogo,
     name: 'Node.js',
     description: 'Backend Runtime',
     color: 'rgba(68, 255, 0, 0.2)'
   },
   {
-    icon: '/icons/tailwind-logo.svg',
+    icon: tailwindLogo,
     name: 'Tailwind CSS',
     description: 'CSS Framework',
     color: 'rgba(0, 200, 255, 0.2)'
   },
   {
-    icon: '/icons/aws-logo.svg',
+    icon: awsLogo,
     name: 'AWS',
     description: 'Cloud Platform',
     color: 'rgba(255, 150, 0, 0.6)'
