@@ -43,7 +43,7 @@ function App() {
           <Socials></Socials>
         </div>
         {/*right panel*/}
-        <div id="about" className='ml-[48vw] w-[46vw] py-24 flex flex-col'>
+        <div id="about" className='ml-[48vw] w-[46vw] pt-24 flex flex-col'>
           <div className='pb-28'>
               {ABOUT_TEXT.map((text, i) =>(
               <React.Fragment key={i}>
@@ -60,7 +60,7 @@ function App() {
           <div id='contact'>
             <Contact />
           </div>
-          
+          <p className='py-24 text-md opacity-60 w-[34vw]'>Coded in Visual Studio Code by me. Built with React and Tailwind CSS, deployed with GitHub Pages. Inspired by BrittanyChiang.com v4.</p>
         </div>
         
     </div>
