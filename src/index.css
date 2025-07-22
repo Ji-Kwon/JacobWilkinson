@@ -1,5 +1,8 @@
 @import "tailwindcss";
-@plugin "line-clamp"
+
+html, body {
+  scroll-behavior: smooth;
+}
 body{
   font-family: 'Inter', sans-serif;
   background-color: #121212;

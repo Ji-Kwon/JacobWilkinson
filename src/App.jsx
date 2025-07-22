@@ -9,6 +9,7 @@ import Socials from './components/Socials';
 import TechnologyCard from './components/TechnologyCard';
 import { ABOUT_TEXT, PROJECTS, TECHNOLOGIES } from './constants';
 import ProjectCard from './components/ProjectCard';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 
 
 
@@ -21,7 +22,20 @@ function App() {
       <div className='fixed p-12 pt-24 w-[40vw] flex flex-col gap-12'>
           <Hero>
             <h1 className='text-5xl font-bold pb-2'>Jacob Wilkinson</h1>
-            <h4 className='text-xl text-[#FFF] mb-2'>Full Stack Developer</h4>
+            <div className="flex flex-row items-center space-x-4 mb-2">
+              <h4 className="text-xl text-white">Full Stack Developer</h4>
+              <a
+                href="/Jacob-Wilkinson_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xl text-white opacity-80 hover:opacity-40 transition-colors flex items-center space-x-2"
+              >
+              Resume 
+              <FaExternalLinkAlt
+                           className="ml-2 size-4 opacity-80 text-[#FFF] group-hover:opacity-40"
+                         />
+              </a>
+            </div>
             <h4 className='text-xl font-bold opacity-20 mb-2'>Toronto, Canada</h4>
             <p className='text-md text-white opacity-60 w-[25vw]'>I am a 21 year old full stack developer who builds fun, useful products.</p>
           </Hero>
@@ -29,7 +43,7 @@ function App() {
           <Socials></Socials>
         </div>
         {/*right panel*/}
-        <div className='ml-[48vw] w-[46vw] py-24 flex flex-col'>
+        <div id="about" className='ml-[48vw] w-[46vw] py-24 flex flex-col'>
           <div className='pb-28'>
               {ABOUT_TEXT.map((text, i) =>(
               <React.Fragment key={i}>
@@ -38,12 +52,15 @@ function App() {
               </React.Fragment>
             ))}
           </div>
-          <div className="space-y-4 pb-24">
+          <div id="projects" className="space-y-4 pb-24">
             {PROJECTS.map(p => (
               <ProjectCard key={p.title} {...p} />
             ))}
           </div>
-          <Contact />
+          <div id='contact'>
+            <Contact />
+          </div>
+          
         </div>
         
     </div>

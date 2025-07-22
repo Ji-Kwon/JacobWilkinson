@@ -9,42 +9,40 @@ export default function Sidebar() {
       {NAV_ITEMS.map(({ id, label }) => {
         const isActive = id === active;
         return (
-          <div
+          <a
             key={id}
+            href={`#${id}`}
             onClick={() => setActive(id)}
-            className="group flex items-center w-fit space-x-4 cursor-pointer"
+            className={`
+              group flex items-center w-fit space-x-4
+              transition-all duration-200
+              ${isActive ? "opacity-100" : "opacity-60"}
+            `}
           >
             {/* the bar */}
             <div
               className={`
-                h-[1.2px]
-                opacity-40
-                bg-white
-                transition-all
-                duration-200
-                ${isActive 
-                  ? "w-16 opacity-100"      // active: wide & white
-                  : "w-8 group-hover:w-16 group-hover:opacity-100 " // default narrow, on hover widens
+                h-[1.2px] bg-white transition-all duration-200
+                ${isActive
+                  ? "w-16 opacity-100"
+                  : "w-8 opacity-40 group-hover:w-16 group-hover:opacity-100"
                 }
               `}
             />
-            {/* the link label */}
-            <a
-              href={"#" + id}
+
+            {/* the label */}
+            <span
               className={`
-                text-[0.75rem]
-                font-bold
-                transition-colors
-                duration-200
-                ${isActive 
-                  ? "text-white opacity-100"          // active: fully opaque
-                  : "opacity-40 group-hover:text-white group-hover:opacity-100"
+                text-[0.75rem] font-bold transition-colors duration-200
+                ${isActive
+                  ? "text-white opacity-100"
+                  : "text-gray-400 group-hover:text-white group-hover:opacity-100"
                 }
               `}
             >
               {label.toUpperCase()}
-            </a>
-          </div>
+            </span>
+          </a>
         );
       })}
     </nav>
