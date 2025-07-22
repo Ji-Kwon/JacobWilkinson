@@ -54,7 +54,7 @@ function App() {
               </React.Fragment>
             ))}
           </div>
-          <div id="projects" className="space-y-4 pb-24">
+          <div id="projects" className="space-y-4 pb-24 pt-12">
             {PROJECTS.map(p => (
               <ProjectCard key={p.title} {...p} />
             ))}
@@ -62,7 +62,7 @@ function App() {
           <div id='contact'>
             <Contact />
           </div>
-          <p className='py-24 text-md opacity-60 w-[34vw]'>Coded in Visual Studio Code by me. Built with React and Tailwind CSS, deployed with GitHub Pages. Inspired by BrittanyChiang.com v4.</p>
+          <p className='pt-24 pb-12 text-md opacity-60 w-[34vw]'>Coded in Visual Studio Code by me. Built with React and Tailwind CSS, deployed with GitHub Pages. Inspired by BrittanyChiang.com v4.</p>
         </div>
         <div className='flex justify-end pb-16 pr-16'>
           <HoverGif stillSrc={HOVERGIF.still}
