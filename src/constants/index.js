@@ -7,12 +7,14 @@ import mysqlLogo from '../assets/icons/mysql-logo.svg';
 import nodeLogo from '../assets/icons/node-logo.svg';
 import tailwindLogo from '../assets/icons/tailwind-logo.svg';
 import awsLogo from '../assets/icons/aws-logo.svg';
-import cssLogo from '../assets/icons/cssLogo.svg'
-import htmlLogo from '../assets/icons/htmlLogo.svg'
+import cssLogo from '../assets/icons/css-logo.svg'
+import htmlLogo from '../assets/icons/html-logo.svg'
 import mongoDBLogo from '../assets/icons/mongodblogo.svg'
 import socketioLogo from '../assets/icons/socketioLogo.svg'
 import workoutThumbnail from '../assets/images/workout-program.png'
 import chatThumbnail from '../assets/images/chat-app.png'
+import tapestill from "../assets/images/tapemeasure.png"
+import tapegif from "../assets/images/tapemeasure.gif"
 import {
   FaGithub,
   FaLinkedin,
@@ -139,3 +141,10 @@ export const PROJECTS = [
   },
   
 ]
+
+export const HOVERGIF = {
+  still: tapestill,
+  gif: tapegif,
+  alt: "Gravity Falls time travel tape measure",
+
+}

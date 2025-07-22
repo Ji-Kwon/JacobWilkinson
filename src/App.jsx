@@ -7,9 +7,11 @@ import Project from './components/ProjectCard';
 import Sidebar from './components/Sidebar'
 import Socials from './components/Socials';
 import TechnologyCard from './components/TechnologyCard';
-import { ABOUT_TEXT, PROJECTS, TECHNOLOGIES } from './constants';
+import { ABOUT_TEXT, PROJECTS, TECHNOLOGIES, HOVERGIF } from './constants';
 import ProjectCard from './components/ProjectCard';
 import { FaExternalLinkAlt } from 'react-icons/fa';
+import HoverGif from './components/HoverGif';
+
 
 
 
@@ -61,6 +63,12 @@ function App() {
             <Contact />
           </div>
           <p className='py-24 text-md opacity-60 w-[34vw]'>Coded in Visual Studio Code by me. Built with React and Tailwind CSS, deployed with GitHub Pages. Inspired by BrittanyChiang.com v4.</p>
+        </div>
+        <div className='flex justify-end pb-16 pr-16'>
+          <HoverGif stillSrc={HOVERGIF.still}
+          gifSrc={HOVERGIF.gif}
+          alt={HOVERGIF.alt}
+          className="size-20 w-fit object-cover rounded-lg shadow-lg hover:cursor-pointer" />
         </div>
         
     </div>
