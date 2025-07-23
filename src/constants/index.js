@@ -15,6 +15,8 @@ import workoutThumbnail from '../assets/images/workout-program.png'
 import chatThumbnail from '../assets/images/chat-app.png'
 import tapestill from "../assets/images/tapemeasure.png"
 import tapegif from "../assets/images/tapemeasure.gif"
+import v1Img from "../assets/images/v1.png"
+import v2Img from "../assets/images/v2.png"
 import {
   FaGithub,
   FaLinkedin,
@@ -148,3 +150,9 @@ export const HOVERGIF = {
   alt: "Gravity Falls time travel tape measure",
 
 }
+
+export const VERSIONS = [
+  { label: "v1.0 (Beta)", url: "https://v1.jacobwilkinson.ca", srcImg: v1Img},
+  { label: "v2.0 (Current)", url: "https://jacobwilkinson.ca", srcImg: v2Img },
+  // …add more as needed…
+];

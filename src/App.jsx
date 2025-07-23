@@ -1,23 +1,22 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css'
 import Contact from './components/Contact';
 import Hero from './components/Hero'
-import Project from './components/ProjectCard';
 import Sidebar from './components/Sidebar'
 import Socials from './components/Socials';
-import TechnologyCard from './components/TechnologyCard';
-import { ABOUT_TEXT, PROJECTS, TECHNOLOGIES, HOVERGIF } from './constants';
+import { ABOUT_TEXT, PROJECTS, TECHNOLOGIES, HOVERGIF, VERSIONS } from './constants';
 import ProjectCard from './components/ProjectCard';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import HoverGif from './components/HoverGif';
+import VersionsModal from './components/VersionsModal';
 
 
 
 
 
 function App() {
-
+  const [showModal, setShowModal] = useState(false);
   return (
     <div className='flex flex-col h-screen'>
     {/*left panel*/}
@@ -62,13 +61,19 @@ function App() {
           <div id='contact'>
             <Contact />
           </div>
-          <p className='pt-24 pb-12 text-md opacity-60 w-[34vw]'>Coded in Visual Studio Code by me. Built with React and Tailwind CSS, deployed with GitHub Pages. Inspired by BrittanyChiang.com v4.</p>
+          <p className='pt-24 pb-12 text-md opacity-60 w-[34vw]'>Coded in Visual Studio Code by me. Built with React and Tailwind CSS, deployed with netlify. Inspired by BrittanyChiang.com v4.</p>
         </div>
         <div className='flex justify-end pb-16 pr-16'>
           <HoverGif stillSrc={HOVERGIF.still}
           gifSrc={HOVERGIF.gif}
           alt={HOVERGIF.alt}
-          className="size-20 w-fit object-cover rounded-lg shadow-lg hover:cursor-pointer" />
+          className="size-20 w-fit object-cover rounded-lg shadow-lg hover:cursor-pointer" 
+          onClick={() => setShowModal(true)} />
+            <VersionsModal
+            show={showModal}
+            versions={VERSIONS}
+            onClose={() => setShowModal(false)}
+            />
         </div>
         
     </div>
