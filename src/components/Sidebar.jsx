@@ -1,18 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import { NAV_ITEMS } from "../constants";
 
-export default function Sidebar() {
-  const [active, setActive] = useState("about");
-
+export default function Sidebar({ activeSection, setActiveSection }) {
   return (
     <nav className="flex flex-col h-full justify-center space-y-6">
       {NAV_ITEMS.map(({ id, label }) => {
-        const isActive = id === active;
+        const isActive = id === activeSection;
         return (
           <a
             key={id}
             href={`#${id}`}
-            onClick={() => setActive(id)}
+            onClick={() => setActiveSection(id)}
             className={`
               group flex items-center w-fit space-x-4
               transition-all duration-200
@@ -29,7 +27,6 @@ export default function Sidebar() {
                 }
               `}
             />
-
             {/* the label */}
             <span
               className={`
