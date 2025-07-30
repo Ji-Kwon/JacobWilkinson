@@ -152,7 +152,7 @@ export const HOVERGIF = {
 }
 
 export const VERSIONS = [
-  { label: "v1.0 (Beta)", url: "https://v1.jacobwilkinson.ca", srcImg: v1Img},
-  { label: "v2.0 (Current)", url: "https://jacobwilkinson.ca", srcImg: v2Img },
+  { label: "v1.0 (Beta)", url: "https://v1.jacobwilkinson.dev", srcImg: v1Img},
+  { label: "v2.0 (Current)", url: "https://jacobwilkinson.dev", srcImg: v2Img },
   // …add more as needed…
 ];
