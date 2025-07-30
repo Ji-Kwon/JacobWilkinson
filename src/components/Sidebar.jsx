@@ -10,7 +10,10 @@ export default function Sidebar({ activeSection, setActiveSection }) {
           <a
             key={id}
             href={`#${id}`}
-            onClick={() => setActiveSection(id)}
+            onClick={(e) => {
+              e.preventDefault(); // Prevent default anchor behavior
+              setActiveSection(id); // Update the active section
+            }}
             className={`
               group flex items-center w-fit space-x-4
               transition-all duration-200

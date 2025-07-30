@@ -51,6 +51,13 @@ function App() {
     };
   }, []);
 
+  // Function to handle navbar item clicks (smooth scroll)
+  const handleNavClick = (sectionId) => {
+    setActiveSection(sectionId);
+    const element = document.getElementById(sectionId);
+    element?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className='flex flex-col h-screen'>
       {/* left panel */}
@@ -74,7 +81,7 @@ function App() {
             I am a 21 year old full stack developer who builds fun, useful products.
           </p>
         </Hero>
-        <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} />
+        <Sidebar activeSection={activeSection} setActiveSection={handleNavClick} />
         <Socials />
       </div>
 
