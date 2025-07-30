@@ -61,7 +61,7 @@ function App() {
           <div id='contact'>
             <Contact />
           </div>
-          <p className='pt-24 pb-12 text-md opacity-60 w-[34vw]'>Coded in Visual Studio Code by me. Built with React and Tailwind CSS, deployed with netlify. Inspired by BrittanyChiang.com v4.</p>
+          <p className='pt-24 pb-12 text-md opacity-60 w-[34vw]'>Coded in Visual Studio Code by me. Built with React and Tailwind CSS, deployed with CLOUDFLARE. Inspired by BrittanyChiang.com v4.</p>
         </div>
         <div className='flex justify-end pb-16 pr-16'>
           <HoverGif stillSrc={HOVERGIF.still}
