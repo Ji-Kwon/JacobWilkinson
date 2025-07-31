@@ -24,9 +24,9 @@ export default function Contact() {
   };
 
   return (
-    <div className="w-[50vw] py-10 pr-16 pl-0 bg-[#121212] text-white">
+    <div className="flex flex-col lg:block items-center w-full lg:w-[50vw] py-10 lg:pr-16 pl-0 bg-[#121212] text-white">
       <h2 className="text-2xl font-bold mb-4 text-center">Contact Me</h2>
-      <form ref={form} onSubmit={sendEmail} className="flex flex-col space-y-4">
+      <form ref={form} onSubmit={sendEmail} className="flex flex-col space-y-4 w-full">
         <input
           type="text"
           name="user_name"

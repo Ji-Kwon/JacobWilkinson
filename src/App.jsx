@@ -35,8 +35,8 @@ function App() {
         }
       },
       {
-        rootMargin: '0px 0px -50% 0px',
-        threshold: 0.5,
+        rootMargin: '0px 0px -25% 0px',
+        threshold: 0.25,
       }
     );
 
@@ -59,66 +59,72 @@ function App() {
   };
 
   return (
-
     <div className='flex flex-col h-screen w-[100vw] lg:w-full'>
       {/*Hero Section*/}
-      <div className='w-fit flex flex-col pt-12 pl-6  lg:fixed lg:p-12 lg:pt-24 lg:w-[40vw] lg:gap-12'>
+      <div className='w-fit flex flex-col pt-12 pl-6 lg:fixed lg:p-12 lg:pt-24 lg:w-[40vw] lg:gap-12 pb-24'>
         <Hero>
-          <h1 className='text-5xl font-bold pb-2'>Jacob Wilkinson</h1>
-          <div className="flex flex-row items-center mb-2 space-x-2 lg:space-x-4">
-            <h4 className="text-xl text-white">Full Stack Developer</h4>
+          <h1 className='text-4xl lg:text-5xl font-bold pb-2'>Jacob Wilkinson</h1>
+          <div className="flex flex-row items-center mb-1 lg:mb-2 space-x-2 lg:space-x-4">
+            <h4 className="text-lg lg:text-xl text-white">Full Stack Developer</h4>
             <a
               href="/Jacob-Wilkinson_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-md lg:text-xl text-white opacity-80 hover:opacity-40 transition-colors flex items-center space-x-2"
+              className="text-lg lg:text-xl text-white opacity-80 hover:opacity-40 transition-colors flex items-center space-x-2"
             >
               Resume
               <FaExternalLinkAlt className="ml-2 size-3 lg:size-4 opacity-80 text-[#FFF] group-hover:opacity-40" />
             </a>
           </div>
-          <h4 className='text-xl font-bold opacity-20 mb-2'>Toronto, Canada</h4>
-          <p className='text-sm lg:text-md text-white opacity-60 w-[66vw] lg:w-[25vw]'>
+          <h4 className='text-md lg:text-xl font-bold opacity-20 mb-2'>Toronto, Canada</h4>
+          <p className='text-md lg:text-md text-white opacity-60 w-[75vw] lg:w-[25vw]'>
             I am a 21 year old full stack developer who builds fun, useful products.
           </p>
         </Hero>
         <div className='hidden lg:block' >
-          <Sidebar  activeSection={activeSection} setActiveSection={handleNavClick} />
+          <Sidebar activeSection={activeSection} setActiveSection={handleNavClick} />
         </div>
-        <Socials />
+        <div className='pt-4 lg:pt-0'>
+          <Socials />
+        </div>
       </div>
 
-      <div className='ml-[48vw] w-[46vw] pt-24 flex flex-col'>
-        <div id="about" ref={aboutRef} className='pb-28'>
-          {ABOUT_TEXT.map((text, i) => (
-            <React.Fragment key={i}>
-              <p className='text-md leading-6.5 opacity-60'>{text}</p>
-              <br />
-            </React.Fragment>
-          ))}
-        </div>
+      {/* Main Content - Modified to match working version */}
+      <div className='lg:ml-[48vw] lg:w-[46vw] lg:pt-24 flex flex-col'>
+        <h2 className='text-lg pl-6 font-bold block lg:hidden'>About</h2>
+        <div className='px-6 lg:px-0'>
+          <div id="about" ref={aboutRef} className='pb-24 lg:pb-28'>
+            {ABOUT_TEXT.map((text, i) => (
+              <React.Fragment key={i}>
+                <p className='text-md leading-6.5 opacity-60'>{text}</p>
+                <br />
+              </React.Fragment>
+            ))}
+          </div>
 
-        <div id="projects" ref={projectsRef} className="space-y-4 pb-24 pt-12">
-          {PROJECTS.map(p => (
-            <ProjectCard key={p.title} {...p} />
-          ))}
-        </div>
+          <h2 className='text-lg font-bold pb-2 block lg:hidden'>Projects</h2>
+          <div id="projects" ref={projectsRef} className="space-y-4 pb-24 lg:pt-12">
+            {PROJECTS.map(p => (
+              <ProjectCard key={p.title} {...p} />
+            ))}
+          </div>
 
-        <div id='contact' ref={contactRef}>
-          <Contact />
-        </div>
+          <div id='contact' ref={contactRef}>
+            <Contact />
+          </div>
 
-        <p className='pt-24 pb-12 text-md opacity-60 w-[34vw]'>
-          Coded in Visual Studio Code by me. Built with React and Tailwind CSS, deployed with CLOUDFLARE. Inspired by BrittanyChiang.com v4.
-        </p>
+          <p className='pt-12 lg:pt-24 pb-10 lg:pb-12 text-md opacity-60 w-full lg:w-[34vw]'>
+            Coded in Visual Studio Code by me. Built with React and Tailwind CSS, deployed with CLOUDFLARE. Inspired by BrittanyChiang.com
+          </p>
+        </div>
       </div>
 
-      <div className='flex justify-end pb-16 pr-16'>
+      <div className='flex justify-end w-full pb-8 pr-8 lg:pb-16 lg:pr-16'>
         <HoverGif
           stillSrc={HOVERGIF.still}
           gifSrc={HOVERGIF.gif}
           alt={HOVERGIF.alt}
-          className="size-20 w-fit object-cover rounded-lg shadow-lg hover:cursor-pointer"
+          className="size-16 lg:size-20 w-fit lg:w-fit hover:cursor-pointer"
           onClick={() => setShowModal(true)}
         />
         <VersionsModal
