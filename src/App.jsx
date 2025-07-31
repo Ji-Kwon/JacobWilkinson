@@ -59,33 +59,35 @@ function App() {
   };
 
   return (
-    <div className='flex flex-col h-screen'>
-      {/* left panel */}
-      <div className='fixed p-12 pt-24 w-[40vw] flex flex-col gap-12'>
+
+    <div className='flex flex-col h-screen w-[100vw] lg:w-full'>
+      {/*Hero Section*/}
+      <div className='w-fit flex flex-col pt-12 pl-6  lg:fixed lg:p-12 lg:pt-24 lg:w-[40vw] lg:gap-12'>
         <Hero>
           <h1 className='text-5xl font-bold pb-2'>Jacob Wilkinson</h1>
-          <div className="flex flex-row items-center space-x-4 mb-2">
+          <div className="flex flex-row items-center mb-2 space-x-2 lg:space-x-4">
             <h4 className="text-xl text-white">Full Stack Developer</h4>
             <a
               href="/Jacob-Wilkinson_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl text-white opacity-80 hover:opacity-40 transition-colors flex items-center space-x-2"
+              className="text-md lg:text-xl text-white opacity-80 hover:opacity-40 transition-colors flex items-center space-x-2"
             >
               Resume
-              <FaExternalLinkAlt className="ml-2 size-4 opacity-80 text-[#FFF] group-hover:opacity-40" />
+              <FaExternalLinkAlt className="ml-2 size-3 lg:size-4 opacity-80 text-[#FFF] group-hover:opacity-40" />
             </a>
           </div>
           <h4 className='text-xl font-bold opacity-20 mb-2'>Toronto, Canada</h4>
-          <p className='text-md text-white opacity-60 w-[25vw]'>
+          <p className='text-sm lg:text-md text-white opacity-60 w-[66vw] lg:w-[25vw]'>
             I am a 21 year old full stack developer who builds fun, useful products.
           </p>
         </Hero>
-        <Sidebar activeSection={activeSection} setActiveSection={handleNavClick} />
+        <div className='hidden lg:block' >
+          <Sidebar  activeSection={activeSection} setActiveSection={handleNavClick} />
+        </div>
         <Socials />
       </div>
 
-      {/* right panel */}
       <div className='ml-[48vw] w-[46vw] pt-24 flex flex-col'>
         <div id="about" ref={aboutRef} className='pb-28'>
           {ABOUT_TEXT.map((text, i) => (
@@ -111,7 +113,6 @@ function App() {
         </p>
       </div>
 
-      {/* Footer */}
       <div className='flex justify-end pb-16 pr-16'>
         <HoverGif
           stillSrc={HOVERGIF.still}
