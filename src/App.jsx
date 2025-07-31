@@ -124,7 +124,7 @@ function App() {
           stillSrc={HOVERGIF.still}
           gifSrc={HOVERGIF.gif}
           alt={HOVERGIF.alt}
-          className="size-16 lg:size-20 w-fit lg:w-fit hover:cursor-pointer"
+          className="h-12 lg:h-18 w-fit hover:cursor-pointer"
           onClick={() => setShowModal(true)}
         />
         <VersionsModal
