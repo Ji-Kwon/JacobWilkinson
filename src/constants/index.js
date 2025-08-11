@@ -116,7 +116,7 @@ export const ABOUT_TEXT = [
 
   " Currently, I am a student at Wilfrid Laurier University, where I founded and and serve as the president of the Korean Students' Association, overseeing everything from event planning to community outreach.",
 
-  "When I'm not coding or leading KSA, you can catch me at the gym, spiking volleyballs, tearing up the ice playing hockey, rock climbing, catching fishing, or snowboarding down some rails."
+  "When I'm not coding or leading KSA, you can catch me at the gym, spiking volleyballs, tearing up the ice playing hockey, rock climbing, catching fish, or snowboarding down some rails."
 ]
 
 export const PROJECTS = [
