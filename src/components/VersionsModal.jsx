@@ -31,7 +31,7 @@ export default function VersionsModal({ show, versions, onClose }) {
         <div
           onClick={(e) => e.stopPropagation()}
           className="
-            relative p-6 w-[60vw] opacity-100
+            relative p-6 w-[100vw] lg:w-[60vw] opacity-100
             transform transition-transform duration-300 ease-out
             scale-100
             pointer-events-auto
@@ -46,7 +46,7 @@ export default function VersionsModal({ show, versions, onClose }) {
             <FaTimes className="w-5 h-5" />
           </button>
 
-          <h2 className="text-xl font-bold mb-4 text-center">
+          <h2 className="text-2xl lg:text-xl font-bold mb-4 text-center">
             Travel back in time
           </h2>
 
@@ -62,7 +62,7 @@ export default function VersionsModal({ show, versions, onClose }) {
                 <img
                   src={srcImg}
                   alt={label}
-                  className="w-[30vw] h-auto object-cover"
+                  className="w-[45vw] lg:w-[30vw] object-cover"
                 />
 
                 {/* hover overlay */}
