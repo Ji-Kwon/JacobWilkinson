@@ -31,7 +31,7 @@ export default function VersionsModal({ show, versions, onClose }) {
         <div
           onClick={(e) => e.stopPropagation()}
           className="
-            relative p-6 w-[100vw] lg:w-[60vw] opacity-100
+            relative px-6 pb-20 w-[80vw] lg:w-[60vw] opacity-100
             transform transition-transform duration-300 ease-out
             scale-100
             pointer-events-auto
@@ -40,17 +40,17 @@ export default function VersionsModal({ show, versions, onClose }) {
           {/* Close button */}
           <button
             onClick={onClose}
-            className="absolute top-3 right-3 text-gray-600 hover:text-gray-900"
+            className="absolute top-3 right-3 text-gray-600 hover:text-gray-900 hover:cursor-pointer"
             aria-label="Close modal"
           >
-            <FaTimes className="w-5 h-5" />
+            <FaTimes className="size-5 pl-2 " />
           </button>
 
-          <h2 className="text-2xl lg:text-xl font-bold mb-4 text-center">
+          <h2 className="text-3xl lg:text-xl font-bold mb-4 text-center pt-4">
             Travel back in time
           </h2>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             {versions.map(({ label, url, srcImg }) => (
               <a
                 key={label}
@@ -62,7 +62,7 @@ export default function VersionsModal({ show, versions, onClose }) {
                 <img
                   src={srcImg}
                   alt={label}
-                  className="w-[45vw] lg:w-[30vw] object-cover"
+                  className="w-[75vw] lg:w-[30vw] h-auto object-cover"
                 />
 
                 {/* hover overlay */}
