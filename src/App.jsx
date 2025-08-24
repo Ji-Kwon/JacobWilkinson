@@ -119,7 +119,7 @@ function App() {
         </div>
       </div>
 
-      <div className='flex justify-end w-full pb-8 pr-8 lg:pb-16 lg:pr-16'>
+      <div className='flex justify-end items-end w-full pb-8 pr-8 lg:pb-16 lg:pr-16'>
         <HoverGif
           stillSrc={HOVERGIF.still}
           gifSrc={HOVERGIF.gif}
