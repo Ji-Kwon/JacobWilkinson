@@ -119,12 +119,12 @@ function App() {
         </div>
       </div>
 
-      <div className='flex justify-end items-end w-full pb-8 pr-8 lg:pb-16 lg:pr-16'>
+      <div className='flex justify-end w-full h-fit pb-8 pr-8 lg:pb-16 lg:pr-16'>
         <HoverGif
           stillSrc={HOVERGIF.still}
           gifSrc={HOVERGIF.gif}
           alt={HOVERGIF.alt}
-          className="size-10 w-fit lg:size-20 lg:w-fit hover:cursor-pointer"
+          className=" w-24 lg:w-30 hover:cursor-pointer"
           onClick={() => setShowModal(true)}
         />
         <VersionsModal
