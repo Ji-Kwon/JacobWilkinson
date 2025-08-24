@@ -122,7 +122,7 @@ export const ABOUT_TEXT = [
 export const PROJECTS = [
   {imageSrc: chatThumbnail,
     title: "Chat Application",
-    href: "https://github.com/Ji-Kwon/chat-app",
+    href: "https://chat-app-y0ww.onrender.com/",
     description: "A full stack chat application using MERN, Socket.io, TailwindCSS & Daisy UI",
     tags: [
       TECHNOLOGIES.find(t => t.name === "React"),
