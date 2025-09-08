@@ -67,7 +67,7 @@ function App() {
           <div className="flex flex-row items-center mb-1 lg:mb-2 space-x-2 lg:space-x-4">
             <h4 className="text-lg lg:text-xl text-white">Full Stack Developer</h4>
             <a
-              href="/Jacob-Wilkinson_Resume.pdf"
+              href="/Jacob-Wilkinson-Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="text-lg lg:text-xl text-white opacity-80 hover:opacity-40 transition-colors flex items-center space-x-2"
